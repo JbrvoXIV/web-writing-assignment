@@ -1,3 +1,8 @@
+:root {
+    --primary: rgb(26,47,67);
+    --secondary: rgb(21,221,187);
+}
+
 * {
     box-sizing: border-box;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
@@ -5,7 +10,7 @@
 }
 
 html {
-    background-color: rgb(26,47,67);
+    background-color: var(--primary);
 }
 
 html,
@@ -34,13 +39,45 @@ header {
 
 .byline {
     font-size: 1.2rem;
-    color: rgb(21,221,187);
+    color: var(--secondary);
     margin-bottom: 5px;
 }
 
 .article_content {
     padding: 10px;
     margin: 20px;
+}
+
+.introduction_section {
+    justify-self: center;
+    align-self: center;
+}
+
+.figure_american-bully,
+.figure_dog-climbing-fence-gif {
+    justify-self: center;
+    align-self: center;
+}
+
+img {
+    width: 100%;
+    min-width: 300px;
+    max-height: 350px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+figcaption {
+    min-width: 300px;
+}
+
+figcaption {
+    font-style: italic;
+    color: var(--secondary);
+}
+
+p {
+    text-indent: 15px;
 }
 
 figure {
@@ -75,6 +112,18 @@ h2 {
     padding-right: 10px;
 }
 
-.reference-list li {
+li {
     margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .flex_container:nth-child(1),
+    .flex_container:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .flex_container:nth-child(1) section,
+    .flex_container:nth-child(2) section {
+        width: 100%;
+    }
 }
